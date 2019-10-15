@@ -24,4 +24,3 @@ const toCellHeader = (cell) => {
 
   return header;
 };
-

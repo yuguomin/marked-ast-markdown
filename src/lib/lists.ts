@@ -1,7 +1,7 @@
-import { decodeHTML} from 'entities';
+import { decodeHTML } from 'entities';
 
 export const genList = (node, indent, index, ast, writeNode) => node.body.map((item, c) => {
-  const charPrefix = node.ordered ? ((c+1) + '. ') : '* ';
+  const charPrefix = node.ordered ? ((c + 1) + '. ') : '* ';
   const formattedItems = item.text.map((childNode, childIndex) => {
     if (typeof childNode === 'string') {
       return decodeHTML(childNode);
