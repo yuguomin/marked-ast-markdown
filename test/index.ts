@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import marked from 'marked-ast';
+import { toMarkdown } from '../dist/index';
+import test from 'tape';
 const async = require('async');
-const marked = require('marked-ast');
-const { toMarkdown } = require('..');
-const test = require('tape');
 const samples = [
   'heading.md',
   'headings.md',
@@ -51,7 +51,7 @@ test('load the expected outputs', (t) => {
 
 samples.forEach((filename, idx) => {
   test('Parse and write: ' + filename, (t) => {
-    var ast;
+    let ast;
     t.plan(1);
 
     ast = marked.parse(loadedSamples[idx]);
