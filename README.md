@@ -3,15 +3,11 @@ use [marked-ast](https://github.com/pdubroy/marked-ast) get Markdown AST, then u
 
 ## install
 add this code in your project package.json/dependencies
+```json
+"marked-ast": "^0.3.0",
+"marked-ast-markdown": "https://github.com/yuguomin/marked-ast-markdown.git"
 ```
-```
-
-need global devDependencies
-[`node`](https://nodejs.org/en/download/package-manager/)
-[`TypeScript`](https://ts.xcatliu.com/introduction/get-typescript)
-[`yarn`](https://yarn.bootcss.com/docs/install/#mac-stable)
-
-install packages
+then install
 ```shell
 yarn install
 ```
@@ -31,8 +27,18 @@ I'm some markdown, and:
 toMarkdown(AST);
 ```
 
+## dev this package
+if you want to dev this package or change, you can do this.
 
-## command
+need global devDependencies
+[`node`](https://nodejs.org/en/download/package-manager/)
+[`TypeScript`](https://ts.xcatliu.com/introduction/get-typescript)
+[`yarn`](https://yarn.bootcss.com/docs/install/#mac-stable)
+
+install packages
+```shell
+yarn install
+```
 
 ### start
 ```shell

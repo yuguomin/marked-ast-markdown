@@ -7,7 +7,7 @@ const times_1 = __importDefault(require("whisk/times"));
 exports.writeTableHeaderLine = (node) => `| ${node.content.map(toCellHeader).join(' | ')} |`;
 const getHeaderLen = (cell) => cell.content.reduce((memo, item) => memo + (item.length || 0), 0);
 const toCellHeader = (cell) => {
-    let header = times_1.default(Math.max(getHeaderLen(cell)), 3).map(() => '-').join('');
+    let header = times_1.default(Math.max(getHeaderLen(cell), 3)).map(() => '-').join('');
     switch ((cell.flags || {}).align) {
         case 'left': {
             header = ':' + header.slice(1);

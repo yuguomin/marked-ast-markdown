@@ -1,5 +1,5 @@
 import marked from 'marked-ast';
-import { toMarkdown } from '../src/index';
+import { toMarkdown } from '../dist/index';
 
 const AST = marked.parse(`
 ## Test
